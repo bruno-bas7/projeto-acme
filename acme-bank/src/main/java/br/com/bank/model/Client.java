@@ -3,6 +3,7 @@
  */
 package br.com.bank.model;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -38,7 +39,9 @@ public class Client {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private String name;
+	@Column(unique = true) 
 	private String email;
+	@Column(unique = true)
 	private String phone;
 	
 	
